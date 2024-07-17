@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="change">Change</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const js=document.querySelector('h1');
+    const btn=document.querySelector('#change');
+
+    const stop=document.querySelector('#stop');
+
+    const action=()=>{
+        js.innerHTML="Understanding setTimeout()";
+    }
+
+    let timeout;
+
+    btn.addEventListener('click',()=>{
+         timeout=setTimeout(action,2000);
+    })
+
+    stop.addEventListener('click',()=>{
+        clearTimeout(timeout);
+    })
+    
+
+</script>
+</html>
